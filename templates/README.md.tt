@@ -1,0 +1,33 @@
+# <%= app_name %>
+
+This is a Rails <%= Rails::VERSION::MAJOR %> app.
+
+## Documentation
+
+The README describes the purpose of this repository and how to set up a development environment. Other sources of documentation are as follows:
+
+* UI & API designs are in `docs/`
+* Server setup instructions are in `PROVISIONING.md`
+* Staging and production deployment instructions are in `DEPLOYMENT.md`
+
+## Prerequisites
+
+This project requires:
+
+* Ruby <%= RUBY_VERSION %>, preferably managed using [rvm][http://rvm.io]
+* Chromedriver for Capybara testing
+* MySQL must be installed and accepting connections
+* [Redis][https://redis.io] must be installed and running on localhost with the default port
+
+On a Mac, you can obtain all of the above packages using [Homebrew][https://brew.sh].
+
+## Getting started
+
+### bin/setup
+
+Run the `bin/setup` script. This script will:
+
+* Check you have the required Ruby version
+* Install gems using Bundler
+* Create local copies of `.env` and `database.yml`
+* Create, migrate, and seed the database

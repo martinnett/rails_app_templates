@@ -1,0 +1,12 @@
+
+.bundle
+.sass-cache
+.rvmrc
+.idea
+.byebug_history
+.DS_Store
+log/*
+tmp/*
+yarn-error.log
+config/*.yml
+coverage

@@ -1,0 +1,8 @@
+class <%= app_name.capitalize %>Api < Grape::API
+  format :json
+  mount V1::Base
+  route :any, '*path' do
+    status 404
+    error!('Page not found.')
+  end
+end

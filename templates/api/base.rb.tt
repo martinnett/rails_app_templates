@@ -1,0 +1,16 @@
+module V1
+  class Base < <%= app_name.capitalize %>Api
+    version 'v1', using: :path
+    format :json
+    formatter :json, Grape::Formatter::ActiveModelSerializers
+    content_type :json, 'application/json;charset=utf-8'
+
+    rescue_from :all do |e|
+      error!(e.message)
+    end
+
+    get 'public' do
+      { :message => "You're getting public API successfully." }
+    end
+  end
+end

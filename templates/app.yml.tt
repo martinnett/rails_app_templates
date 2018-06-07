@@ -1,0 +1,3 @@
+defaults: &defaults
+  appId: '<appId>'
+  appSecret: '<appSecret>'
